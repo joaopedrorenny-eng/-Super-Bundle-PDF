@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bobbie Goods Christian - Coloring Book Preview</title>
+    <title>Bible Goods - Coloring Book Kit Preview</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" xintegrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -24,7 +24,7 @@
             border: 1px solid #eee;
             border-radius: 8px;
             page-break-inside: avoid;
-            page-break-after: always; /* Garante que cada atividade fique em uma página separada no PDF */
+            page-break-after: always;
         }
         .page-title {
             font-family: 'Patrick Hand', cursive;
@@ -41,11 +41,6 @@
             font-size: 1.1rem;
             color: #444;
             line-height: 1.6;
-        }
-        .page-verse {
-            font-style: italic;
-            color: #666;
-            margin-top: 8px;
         }
         .product-divider {
             border: 0;
@@ -74,19 +69,14 @@
             justify-content: center;
             align-items: center;
         }
-        .grid-cols-14 {
-            grid-template-columns: repeat(14, minmax(0, 1fr));
-        }
-        .belongs-to-box {
-            border: 2px dashed #e2e8f0;
-            padding: 40px 20px;
+        .kit-description {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #FFFBF5;
             border-radius: 8px;
-            margin-top: 20px;
-        }
-        .belongs-to-line {
-            border-bottom: 2px solid #cbd5e1;
-            margin: 20px auto;
-            width: 80%;
+            border: 1px solid #FDEBD0;
+            text-align: center;
         }
     </style>
 </head>
@@ -99,150 +89,105 @@
     </div>
 
     <main id="contentToPrint">
-        <!-- Main Cover -->
-        <div class="page-container text-center">
-            <h1 class="page-title">Bobbie Goods Christian</h1>
-            <h2 class="page-subtitle mb-4">A Christian Coloring Book</h2>
-            <img src="https://i.imgur.com/a9c3p3d.png" alt="A cute drawing of Jesus as the Good Shepherd, holding a lamb" class="w-full h-auto rounded-md border">
-            <p class="page-text mt-4">"Train up a child in the way he should go..." (Proverbs 22:6)</p>
+        <!-- Kit Landing Page -->
+        <div class="kit-description">
+            <h1 class="page-title">Bible Goods: Noah's Ark + Miracles of Jesus Coloring Kit</h1>
+            <p class="page-text mt-4">
+                Inspired by the "comfy & cute" style, this kit includes two charming coloring books that bring key Bible stories to life. Perfect for all ages, it's an invitation to relax, create, and connect with stories of faith.
+            </p>
+            <p class="page-text mt-2"><strong>What's Included:</strong> "Bible Goods: Noah's Ark" & "Bible Goods: Miracles of Jesus"</p>
         </div>
+
+        <hr class="product-divider">
+
+        <!-- Book 1: Noah's Ark -->
+        <h2 class="product-title">Book 1: Bible Goods - Noah's Ark</h2>
         
-        <!-- Página: This Book Belongs To... -->
+        <!-- Cover Page -->
         <div class="page-container text-center">
-            <img src="https://i.imgur.com/c5j4b8g.png" alt="God holding the globe, representing creation" class="w-48 h-auto rounded-full mx-auto mb-4">
-            <div class="belongs-to-box">
-                 <h3 class="page-subtitle">This book belongs to:</h3>
-                 <div class="belongs-to-line"></div>
-            </div>
-        </div>
-
-        <!-- Páginas da História... -->
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/c5j4b8g.png" alt="God holding the globe, representing creation" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">In the beginning, God created the heavens and the earth.</p>
-            <p class="page-verse">Genesis 1:1</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/N5dE2fN.png" alt="A smiling sun, representing the creation of light" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">On the first day, God said, "Let there be light," and there was light.</p>
-            <p class="page-verse">Genesis 1:3</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/kY8F0Vd.png" alt="A serene sky above the sea, representing the second day of creation" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">On the second day, God separated the water from the sky.</p>
-            <p class="page-verse">Genesis 1:6-8</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/vQq9Z2A.png" alt="Lush land with plants and trees, representing the third day of creation" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">On the third day, God created the dry land and filled it with plants and trees.</p>
-            <p class="page-verse">Genesis 1:9-13</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/N5dE2fN.png" alt="The sky with the sun, moon, and stars, representing the fourth day of creation" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">On the fourth day, God created the sun, the moon, and the stars.</p>
-            <p class="page-verse">Genesis 1:14-19</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/5u0wJ6c.png" alt="Sea creatures and birds, representing the fifth day of creation" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">On the fifth day, God created the great creatures of the sea and every winged bird.</p>
-            <p class="page-verse">Genesis 1:20-23</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/Uf5J2gW.png" alt="Land animals with Adam and Eve in the Garden of Eden" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">On the sixth day, God created the animals on the land, and finally, humans.</p>
-            <p class="page-verse">Genesis 1:24-31</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/D4s6O4h.png" alt="God resting on the seventh day of creation" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">On the seventh day, God rested from all the work of creating that he had done.</p>
-            <p class="page-verse">Genesis 2:1-3</p>
-        </div>
-
-         <div class="page-container text-center">
-            <img src="https://i.imgur.com/M6L2L7y.png" alt="A portrait of Adam for the 'belongs to' page" class="w-48 h-auto rounded-full mx-auto mb-4">
-            <div class="belongs-to-box">
-                 <h3 class="page-subtitle">This book belongs to:</h3>
-                 <div class="belongs-to-line"></div>
-            </div>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/vFz8K5t.png" alt="God forming Adam from the dust of the ground" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">Then the Lord God formed a man from the dust of the ground.</p>
-            <p class="page-verse">Genesis 2:7</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/uR7g0yM.png" alt="Eve in the Garden of Eden, with the Tree of Knowledge" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">Then the Lord God made a woman from the rib he had taken out of the man.</p>
-            <p class="page-verse">Genesis 2:22</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/k2tB8lG.png" alt="The serpent in the tree, tempting with an apple" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">The serpent was more crafty than any of the wild animals the Lord God had made.</p>
-            <p class="page-verse">Genesis 3:1</p>
-        </div>
-         <div class="page-container text-center">
-            <img src="https://i.imgur.com/D4s6O4h.png" alt="God walking in the Garden of Eden" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">And they heard the sound of the Lord God walking in the garden in the cool of the day.</p>
-            <p class="page-verse">Genesis 3:8</p>
-        </div>
-
-         <div class="page-container text-center">
-            <img src="https://i.imgur.com/yO8pX7X.png" alt="A portrait of Jesus for the 'belongs to' page" class="w-48 h-auto rounded-full mx-auto mb-4">
-            <div class="belongs-to-box">
-                 <h3 class="page-subtitle">This book belongs to:</h3>
-                 <div class="belongs-to-line"></div>
-            </div>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/yO8pX7X.png" alt="Baby Jesus in the manger, the nativity scene" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">She gave birth to her firstborn, a son. She wrapped him in cloths and placed him in a manger.</p>
-            <p class="page-verse">Luke 2:7</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/5J3A0U5.png" alt="John the Baptist baptizing Jesus in the Jordan River" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">As soon as Jesus was baptized, he went up out of the water. At that moment heaven was opened.</p>
-            <p class="page-verse">Matthew 3:16</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/lJ4dO9g.png" alt="Jesus walking on the water towards his disciples' boat" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">Jesus went out to them, walking on the lake. "Take courage! It is I. Don’t be afraid."</p>
-            <p class="page-verse">Matthew 14:25-27</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/j4oYf8J.png" alt="Jesus surrounded by a group of loving children" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">Jesus said, "Let the little children come to me, and do not hinder them."</p>
-            <p class="page-verse">Matthew 19:14</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/sW62N4c.png" alt="Jesus multiplying the loaves and fishes for the crowd" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">Taking the five loaves and the two fish and looking up to heaven, he gave thanks and broke the loaves.</p>
-            <p class="page-verse">Matthew 14:19</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/jPe8a0V.png" alt="Jesus calling his first disciples by the sea" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">"Come, follow me," Jesus said, "and I will send you out to fish for people."</p>
-            <p class="page-verse">Matthew 4:19</p>
-        </div>
-         <div class="page-container text-center">
-            <img src="https://i.imgur.com/iR3G8uL.png" alt="Jesus calming the storm on the Sea of Galilee" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">He got up, rebuked the wind and said to the waves, "Quiet! Be still!" Then the wind died down and it was completely calm.</p>
-            <p class="page-verse">Mark 4:39</p>
-        </div>
-        <div class="page-container text-center">
-            <img src="https://i.imgur.com/0f4p2oN.png" alt="The resurrected Jesus Christ standing outside the empty tomb" class="w-full h-auto rounded-md border mb-4">
-            <p class="page-text">He is not here; he has risen, just as he said.</p>
-            <p class="page-verse">Matthew 28:6</p>
-        </div>
-        
-        <div class="page-container text-center">
+            <h1 class="page-title">Bible Goods</h1>
+            <h2 class="page-subtitle mb-4">Noah's Ark</h2>
             <div class="w-full h-96 bg-gray-200 rounded-md border flex items-center justify-center mb-4">
-                <p class="text-gray-500 font-semibold">[Image of David and Goliath to be generated here]</p>
+                <p class="text-gray-500 font-semibold">[Cute Noah's Ark illustration to be generated here]</p>
             </div>
-            <p class="page-text">David, a young shepherd, bravely faced the giant Goliath with only a sling and a stone.</p>
-            <p class="page-verse">1 Samuel 17</p>
+            <p class="page-text">A Comfy & Cozy Coloring Book</p>
+        </div>
+
+        <!-- Belongs To Page -->
+        <div class="page-container text-center">
+            <div style="border: 2px dashed #e2e8f0; padding: 40px 20px; border-radius: 8px; margin-top: 20px;">
+                 <h3 class="page-subtitle">This book belongs to:</h3>
+                 <div style="border-bottom: 2px solid #cbd5e1; margin: 20px auto; width: 80%;"></div>
+            </div>
         </div>
 
 
+        <!-- Coloring Pages -->
+        <div class="page-container text-center">
+            <img src="https://i.imgur.com/u1aL6gG.jpg" alt="Four scenes from Noah's Ark: Noah building the ark, the rain starting, the ark on the water, and the rainbow." class="w-full h-auto rounded-md border">
+            <p class="page-text mt-2">Scenes from the story of Noah and the Ark.</p>
+        </div>
+        <div class="page-container text-center">
+            <img src="https://sundayschoolzone.com/wp-content/uploads/2014/09/god_sent_a_great_flood_coloring_page.jpg" alt="Animals walking up the ramp into Noah's Ark." class="w-full h-auto rounded-md border">
+            <p class="page-text mt-2">God sent a great flood.</p>
+        </div>
+        <div class="page-container text-center">
+            <img src="https://sundayschoolzone.com/wp-content/uploads/2014/09/god_made_a_promise_to_noah_coloring_page.jpg" alt="Noah and his family looking at the rainbow." class="w-full h-auto rounded-md border">
+            <p class="page-text mt-2">God made a promise to Noah.</p>
+        </div>
+        <div class="page-container text-center">
+            <img src="https://sundayschoolzone.com/wp-content/uploads/2014/09/god_guided_noah_coloring_page.jpg" alt="Noah building the ark with animals nearby." class="w-full h-auto rounded-md border">
+            <p class="page-text mt-2">God guided Noah.</p>
+        </div>
+        <div class="page-container text-center">
+            <img src="https://sundayschoolzone.com/wp-content/uploads/2014/04/animals-in-ark-coloring-page.jpg" alt="Animals inside Noah's Ark, looking out the window." class="w-full h-auto rounded-md border">
+            <p class="page-text mt-2">The animals were safe in the ark.</p>
+        </div>
+        <div class="page-container text-center">
+            <img src="https://sundayschoolzone.com/wp-content/uploads/2014/02/noah-sent-dove-coloring-page.jpg" alt="Noah sending a dove from the ark's window." class="w-full h-auto rounded-md border">
+            <p class="page-text mt-2">Noah sent out a dove.</p>
+        </div>
+
+        <hr class="product-divider">
+
+        <!-- Book 2: Miracles of Jesus -->
+        <h2 class="product-title">Book 2: Bible Goods - Miracles of Jesus</h2>
+
+        <!-- Cover Page -->
+        <div class="page-container text-center">
+            <h1 class="page-title">Bible Goods</h1>
+            <h2 class="page-subtitle mb-4">Miracles of Jesus</h2>
+            <div class="w-full h-96 bg-gray-200 rounded-md border flex items-center justify-center mb-4">
+                <p class="text-gray-500 font-semibold">[Cute "Miracles of Jesus" illustration to be generated here]</p>
+            </div>
+            <p class="page-text">A Comfy & Cozy Coloring Book</p>
+        </div>
+
+        <!-- Belongs To Page -->
+        <div class="page-container text-center">
+            <div style="border: 2px dashed #e2e8f0; padding: 40px 20px; border-radius: 8px; margin-top: 20px;">
+                 <h3 class="page-subtitle">This book belongs to:</h3>
+                 <div style="border-bottom: 2px solid #cbd5e1; margin: 20px auto; width: 80%;"></div>
+            </div>
+        </div>
+
+        <!-- Coloring Pages -->
+        <div class="page-container text-center">
+            <img src="https://i.imgur.com/sW62N4c.png" alt="Jesus multiplying the loaves and fishes for a large crowd." class="w-full h-auto rounded-md border">
+            <p class="page-text mt-2">Jesus feeds the five thousand.</p>
+        </div>
+        <div class="page-container text-center">
+            <img src="https://i.imgur.com/iR3G8uL.png" alt="Jesus calming the storm on the Sea of Galilee." class="w-full h-auto rounded-md border">
+            <p class="page-text mt-2">Jesus calms the storm.</p>
+        </div>
+        <div class="page-container text-center">
+            <img src="https://i.imgur.com/lJ4dO9g.png" alt="Jesus walking on the water towards his disciples in a boat." class="w-full h-auto rounded-md border">
+            <p class="page-text mt-2">Jesus walks on water.</p>
+        </div>
+        <div class="page-container text-center">
+            <img src="https://i.imgur.com/0f4p2oN.png" alt="The resurrected Jesus standing outside the empty tomb." class="w-full h-auto rounded-md border">
+            <p class="page-text mt-2">The resurrection of Jesus.</p>
+        </div>
     </main>
 
     <script>
@@ -254,7 +199,7 @@
             const element = document.getElementById('contentToPrint');
             const opt = {
               margin:       0.5,
-              filename:     'Bobbie_Goods_Christian_Coloring_Book.pdf',
+              filename:     'Bible_Goods_Coloring_Kit_Preview.pdf',
               image:        { type: 'jpeg', quality: 0.98 },
               html2canvas:  { scale: 2, useCORS: true },
               jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
@@ -269,4 +214,3 @@
     
 </body>
 </html>
-
